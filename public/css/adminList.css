@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --corFundo: #f4f4f4;
+    --corComponentes: rgb(150, 150, 150);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--corFundo);
+    padding: 20px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+header{
+    background-color: var(--corComponentes);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+
+
+#containerLivros, #containerCategorias{
+    background-color: var(--corComponentes);
+    border-radius: 8px;
+    border: 2px solid #737373;
+
+}
+
+table{
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+thead{
+    background-color: rgb(101, 101, 101);
+    border-radius: 12px;
+    height: 40px;
+}
+
+th{
+    font-size: 1.1em;
+    color: rgb(230, 230, 230);
+}
+
+tbody{
+    border: 2px solid black;
+}
+
+tbody tr{
+  background-color: rgb(221, 221, 221);
+  height: 35px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+tbody tr:hover{
+    background-color: rgb(190, 190, 190);
+    transition: .3s;
+}
+
+#adicionado, #atualizado{
+    width: 190px;
+    text-align: center;
+}
+
+#disponivel{
+    width: 100px;
+    text-align: center;
+}
+
+#nomeLivro, #autor, #nomeCategoria{
+    padding-left: 5px;
+}
+
+header, #containerLivros, button, #containerCategorias{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .12);
+}
+
+#container{
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+}
+
+#container div{
+    min-height: 70px;
+}
+
+#containerAdicionar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+/* #containerAdicionar button{
+    height: 50px;
+    width: 50px;
+    background-color: var(--corComponentes);
+    border-radius: 8px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+} */
+
+/* #containerAdicionar button:hover{
+    background-color: rgb(169, 169, 169);
+    transition: .3s;
+} */
+
+#escolha{
+    margin: 25px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.botaoNovo{
+    background-color: rgb(150, 150, 150);
+    width: 130px;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 1.4em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #737373;
+}
+
+.botaoNovo:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}

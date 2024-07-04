@@ -1,0 +1,153 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --corHeaderItem: rgb(44, 44, 44);
+    --corFundo: #272727;
+    --corElementos: #454545;
+    --corTexto: #cccccc;
+    --corCard: #3d3d3d;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--corFundo);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    padding: 20px;
+    gap: 30px;
+}
+
+header, main{
+    background-color: var(--corElementos);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .18); 
+}
+
+header{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--corTexto);
+}
+
+main{
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    padding: 15px;
+    /* display: grid;
+    grid-template-rows: repeat(auto-fit, 250px);
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 15px; */
+}
+
+#message{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    color: var(--corTexto);
+}
+
+.card{
+    width: 190px;
+    height: 240px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    background-color: var(--corCard);
+    border: 2px solid #272727;
+    padding: 10px;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+#img{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.card div, .card div p{
+    border-radius: 2px;
+}
+
+.card div#content p, .card div#content h5{
+    background-color: #454545;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    color: rgb(212, 212, 212);
+}
+
+.card div#content{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.card h5{
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.item{
+    border: 2px solid rgb(92, 92, 92);
+    height: min-content;
+}
+
+.item .headerItem{
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--corHeaderItem);
+    color: var(--corTexto);
+    font-weight: bolder;
+    font-size: 1.8em;
+    position: relative;
+}
+
+.img{
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    right: 15px;
+}
+
+.item .bodyItem{
+    display: none;
+    min-height: 30px;
+    padding: 15px;
+    
+    grid-template-columns: repeat(auto-fit, 190px);
+    justify-content: center;
+    gap: 15px;
+    background-color: #404040;
+
+}
+#mensagemSemLivros{
+    text-align: center;
+    color: var(--corTexto);
+}
