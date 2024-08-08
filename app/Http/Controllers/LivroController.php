@@ -149,7 +149,8 @@ class LivroController extends Controller
                     'autor' => $autorLivro,
                     'linkImagem' => $imagem,
                     'disponivel' => $disponivel,
-                    'idCategoria' => $idCategoria
+                    'idCategoria' => $idCategoria,
+                    'updated_at' => date("Y/m/d H:i:s")
                 ]
             );
 

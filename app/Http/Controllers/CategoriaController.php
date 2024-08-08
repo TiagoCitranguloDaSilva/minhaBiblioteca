@@ -51,7 +51,8 @@ class CategoriaController extends Controller
               ->update(
                 [
                     'nome' => $nomeCategoria,
-                    'disponivel' => $disponivel
+                    'disponivel' => $disponivel,
+                    'updated_at' => date("Y/m/d H:i:s")
                 ]
             );
 
